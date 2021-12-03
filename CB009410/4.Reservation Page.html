@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Santani LK</title>
+        <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="CSS/4.Reservation Page.css">
+    </head>
+    <body>
+        <section class="header">
+            <nav>
+                <a href="index.html"><img src="images/Santani Logo.png"></a>
+                <div class="nav-links" id="navLinks">
+                    <img src="Images/Icons/Close.png" class="logo1" onclick="hideMenu()">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="2.Accommodation Page.html">ACCOMMODATION</a></li>
+                        <li><a href="3.Dining Page.html">DINING</a></li>
+                        <li><a href="4.Reservation Page.html">RESERVATION</a></li>
+                        <li><a href="5.Contact Us.html">CONTACT US</a></li>
+                    </ul>
+                </div>
+                <img src="Images/Icons/Menu.png" class="logo2" onclick="showMenu()">
+            </nav>
+            <div class="text-box">
+                <h1>RESERVATION</h1>
+            </div>
+        </section>
+
+        <script>
+            var navLinks = document.getElementById("navLinks");
+            function showMenu(){
+                navLinks.style.right = "0px";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-200px";
+            }
+        </script>
+
+        <script type="text/javascript">
+     
+            const sendEmail = (e) => {
+                e.preventDefault();
+
+            const roomchargers =
+                document.getElementById("Room_Type").value *
+                document.getElementById("days").value;
+
+            const mealschargers =
+                document.getElementById("MealType").value *
+                document.getElementById("Occupancy").value;
+
+            const points = 0;
+
+            /* if (document.getElementById("Occupancy").value > 3) {
+             points = document.getElementById("Occupancy").value;
+            alert(points);
+            } */
+
+            const amount = roomchargers + mealschargers;
+
+            emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID).then(
+                (result) => {
+                    showThanksMsg(amount, mealschargers, roomchargers, points);
+                },
+                (error) => {
+                    console.log(error.text);
+                    }
+                );
+            };
+
+            const showThanksMsg = (amount, meal, room, points) => {
+                const thanksMsg = document.querySelector(".form_thanksMsg");
+                thanksMsg.style.display = "block";
+
+                const bookingForm = document.querySelector(".bookingForm");
+                bookingForm.style.display = "none";
+
+                document.getElementById("tblRoomChnarges").innerHTML = room;
+                document.getElementById("tblMealChnarges").innerHTML = meal;
+                document.getElementById("tblTotal").innerHTML = amount;
+                document.getElementById("tblPoints").innerHTML = points;
+            };
+
+            const hideForm = () => {
+                const form = document.querySelector(".form");
+                form.style.display = "none";
+            };
+        </script>
+
+        <section>
+            <div class="container">
+                <form class="bookingForm" action="#" onsubmit="sendEmail(event)">
+                    <label for="fname">Full Name</label>
+                    <input
+                      type="text"
+                      id="fullname"
+                      name="fullname"
+                      placeholder="Your Name.." 
+                      class="contact-in-input"
+                    /><br>
+                    <label for="email">Email</label>
+                    <input
+                      type="text"
+                      id="email"
+                      name="email"
+                      placeholder="Your Email.."
+                      class="contact-in-input"
+                    /><br>
+                    <label for="email">Phone</label>
+                    <input
+                      type="text"
+                      id="Phone"
+                      name="Phone"
+                      placeholder="Your phone.."
+                      class="contact-in-input"
+                    /><br>
+                    <label for="email">Room Type</label>
+                    <select
+                      type="text"
+                      id="Room_Type"
+                      name="Room_Type"
+                      placeholder="Your room type.."
+                      class="contact-in-input"
+                    ><br>
+                      <option value="10000">Standard</option>
+                      <option value="15000">Premium</option>
+                      <option value="20000">Deluxe</option>
+                      <option value="25000">Suit</option>
+                    </select><br>
+
+                    <label for="email">Meal Type</label>
+                    <select
+                      type="text"
+                      id="MealType"
+                      name="MealType"
+                      placeholder="Your meal type.."
+                      class="contact-in-input"
+                    >
+                      <option value="1500">BB</option>
+                      <option value="3500">HB</option>
+                      <option value="5000">FB</option>
+                      <option value="400">Other</option>
+                    </select><br>
+  
+                    <label for="email">No Of Days </label>
+                    <select
+                      type="text"
+                      id="days"
+                      name="days"
+                      placeholder="Your days.."
+                      class="contact-in-input"
+                    >
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                    </select><br>
+
+                    <label for="email">Occupancy </label>
+                    <select
+                      type="text"
+                      id="Occupancy"
+                      name="Occupancy"
+                      placeholder="Your Occupancy.."
+                      class="contact-in-input"
+                    >
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                    </select><br>
+      
+                    <label for="fname">From Date </label>
+                    <input
+                      type="date"
+                      id="fromdate"
+                      name="fromdate"
+                      placeholder="Your fromdate.."
+                    />
+                    <label for="fname">To Date </label>
+                    <input
+                      type="date"
+                      id="todate"
+                      name="todate"
+                      placeholder="Your fromdate.."
+                    /><br><br>
+
+                    <label for="country">Country</label>
+                    <select id="country" name="country">
+                      <option value="Sri lanka">Sri Lanka</option>
+                      <option value="England">England</option>
+                      <option value="Other">Other</option>
+                    </select>
+                    <br><br>
+                    <label for="subject">Comments</label>
+                        <textarea
+                            id="subject"
+                            name="subject"
+                            placeholder="Write something.."
+                            class="contact-in-textarea"
+                        >
+                        </textarea><br>
+      
+                    <input type="button" value="Add to reserve" class="hero-btn"/>
+                    <input type="submit" value="Reserve" class="hero-btn"/>
+                    <input type="button" value="Add to favorites" class="hero-btn"/>
+                    <input type="button" value="favourite reserve" class="hero-btn"/>
+                    <input type="button" value="check loyalty" class="hero-btn"/>
+                    
+      
+                </form>
+                <div class="form_thanksMsg" style="display: none">
+                    Thnak you very much for reservation. If you have any clarification please contact us.
+      
+                <table border="1">
+                    <tr>
+                        <th>Company</th>
+                        <th>Country</th>
+                    </tr>
+                    <tr>
+                        <td>Room Chnarges</td>
+                        <td><span id="tblRoomChnarges"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Meal Charges</td>
+                        <td><span id="tblMealChnarges"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Points</td>
+                        <td><span id="tblPoints"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Total</td>
+                        <td><span id="tblTotal"></span></td>
+                    </tr>
+                </table>
+            </div>
+        </section>

@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+}
+.header{
+    min-height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(19, 19, 19, 0.5),rgb(0,0,0,0.5)),url('../Images/4.Reservation\ Image.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 40px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 20px;
+    color: #fff;
+}
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 25px;
+    }
+    .text-box p{
+        font-size: 15px;
+    }
+}
+
+
+.container {
+    width: 80%;
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 10x;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.form_thanksMsg {
+    font-size: 17px;
+}
+.bookingForm{
+    font-size: 25px;
+    width: 100%;
+    padding: 50px;
+    border: 3px solid rgb(255, 208, 0);
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}  
+.contact-in-input {
+	width: 100%;
+	height: 40px;
+	margin-bottom: 20px;
+	border: 1px solid rgb(0, 0, 0);
+	outline: none;
+	padding-left: 5px;
+	background: transparent;
+	color: rgb(0, 0, 0);
+	font-size: 12px;
+	font-weight: 300;
+	font-family: 'Poppins', sans-serif;
+}
+.contact-in-input::placeholder {
+	color: rgb(0, 0, 0);
+}
+.contact-in-textarea {
+	width: 100%;
+	height: 140px;
+	margin-bottom: 20px;
+	border: 1px solid rgb(0, 0, 0);
+	outline: none;
+	padding-top: 5px;
+	padding-left: 5px;
+	background: transparent;
+	color: rgb(0, 0, 0);
+	font-size: 12px;
+	font-weight: 300;
+	font-family: 'Poppins', sans-serif;
+}
+.contact-in-textarea::placeholder {
+	color: #fff;
+}
+.hero-btn{
+    margin-top: 20px;
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    border: 1.5px solid rgb(0, 0, 0);
+    padding: 12px 34px;
+    font-size: 14px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    border: 1px solid #ffe70a;
+    background: #ffe70a;
+    transition: 0.2s;
+}

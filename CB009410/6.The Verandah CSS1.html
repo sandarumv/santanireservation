@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Santani LK</title>
+        <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="CSS/6.The Verandah CSS1.css">
+    </head>
+    <body>
+        <section class="header">
+            <nav>
+                <a href="index.html"><img src="images/Santani Logo.png"></a>
+                <div class="nav-links" id="navLinks">
+                    <img src="Images/Icons/Close.png" class="logo1" onclick="hideMenu()">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="2.Accommodation Page.html">ACCOMMODATION</a></li>
+                        <li><a href="3.Dining Page.html">DINING</a></li>
+                        <li><a href="4.Reservation Page.html">RESERVATION</a></li>
+                        <li><a href="5.Contact Us.html">CONTACT US</a></li>
+                    </ul>
+                </div>
+                <img src="Images/Icons/Menu.png" class="logo2" onclick="showMenu()">
+            </nav>
+            <div class="text-box">
+                <h1>THE VERANDAH</h1>
+                <p>For more than a century and a half, we’ve had adventurers, authors, generals and gentry dining under the eaves of the Verandah.</p>
+            </div>
+        </section>
+
+        <script>
+            var navLinks = document.getElementById("navLinks");
+            function showMenu(){
+                navLinks.style.right = "0px";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-200px";
+            }
+        </script>
+        <section>
+            <div class="services">
+                <h1>QUICK REFERENCE</h1>
+                <div class="cen">
+                  <div class="service">
+                    <img src="Images/Icons/Clock.png" class="icons1"><br><br>
+                    <h2>Breakfast</h2>
+                    <p>7.00AM - 10.00AM</p>
+                  </div>
+          
+                  <div class="service">
+                    <img src="Images/Icons/Clock.png" class="icons1"><br><br>
+                    <h2>Lunch</h2>
+                    <p>12.00PM - 3.00pm</p>
+                  </div>
+          
+                  <div class="service">
+                    <img src="Images/Icons/Clock.png" class="icons1"><br><br>
+                    <h2>Dinner</h2>
+                    <p>7.00pm - 10.00pm</p>
+                  </div>
+          
+                  <div class="service">
+                    <img src="Images/Icons/Location 1.png" class="icons1"><br><br>
+                    <h2>Location</h2>
+                    <p>Lobby Level</p>
+                  </div>
+          
+                  <div class="service">
+                    <img src="Images/Icons/Seat.png" class="icons1"><br><br>
+                    <h2>Seating Type</h2>
+                    <p>Indoor Seating</p>
+                  </div>
+          
+                  <div class="service">
+                    <img src="Images/Icons/Attire.png" class="icons1"><br><br>
+                    <h2>Attire</h2>
+                    <p>Smart Casual</p>
+                  </div>
+                </div>
+              </div>
+        </section>
+    </body>
+</html>

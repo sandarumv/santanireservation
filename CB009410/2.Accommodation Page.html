@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Santani LK</title>
+        <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="CSS/2.Accommodation.css">
+    </head>
+    <body>
+        <section class="header">
+            <nav>
+                <a href="index.html"><img src="images/Santani Logo.png"></a>
+                <div class="nav-links" id="navLinks">
+                    <img src="Images/Icons/Close.png" class="logo1" onclick="hideMenu()">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="2.Accommodation Page.html">ACCOMMODATION</a></li>
+                        <li><a href="3.Dining Page.html">DINING</a></li>
+                        <li><a href="4.Reservation Page.html">RESERVATION</a></li>
+                        <li><a href="5.Contact Us.html">CONTACT US</a></li>
+                    </ul>
+                </div>
+                <img src="Images/Icons/Menu.png" class="logo2" onclick="showMenu()">
+            </nav>
+            <div class="text-box">
+                <h1>ACCOMMODATION</h1>
+                <p> Discover the true meaning of elegance, grace & splendour at The Santani LK, 
+                    where we bring you regal indulgence, outstanding individual comforts & the best service amongst hotels in Colombo.</p>
+            </div>
+        </section>
+
+        <script>
+            var navLinks = document.getElementById("navLinks");
+            function showMenu(){
+                navLinks.style.right = "0px";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-200px";
+            }
+        </script>
+
+        <section class="campus">
+            <h1>ROOMS</h1><br>
+            <p>A pinnacle of comfort, our rooms are dressed in warm shades of beige, fitted with white marble bathrooms & adorned with furniture in soothing shades of ivory.</p>
+
+            <div class="row">
+                <div class="campus-col">
+                    <img src="Images/Superior Room.jpg">
+                     <div class="layer">
+                        <h3>SUPERIOR ROOM</h3>
+                    </div>
+                </div>
+                <div class="campus-col">
+                    <img src="images/Deluxe Room.jpg">
+                    <div class="layer">
+                        <h3>DELUXE ROOM</h3>
+                    </div>
+                </div>
+                <div class="campus-col">
+                    <img src="images/Executive Room.jpg">
+                    <div class="layer">
+                        <h3>EXECUTIVE ROOM</h3>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tablep">
+            <h2 class="productsh">SUMMARY ON TYPES OF ROOMS</h2><br>
+            <table class="products" >
+                <thead>
+                    <tr>
+                        <th>ROOM TYPE</th>
+                        <th>BED TYPES</th>
+                        <th>LOCATION</th>
+                        <th>Bathrooms</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>SUPERIOR ROOM</td>
+                        <td>
+                            <ul><br>
+                                <li>King Size Bed</li>
+                                <li>Twin Beds</li><br>
+                            </ul>
+                        </td>
+                        <td>2nd to 4th Floor</td>
+                        <td>White Marble bathrooms</td>
+                    </tr>
+                    <tr>
+                        <td>DELUXE ROOM</td>
+                        <td>
+                            <ul><br>
+                                <li>King Size Bed</li>
+                                <li>Twin Beds</li><br>
+                            </ul>
+                        </td>
+                        <td>5th to 7th Floor</td>
+                        <td>Black & White marble bathrooms</td>
+                    </tr>
+                    <tr>
+                        <td>EXECUTIVE ROOM</td>
+                        <td>
+                            <ul><br>
+                                <li>2 King Size Bed</li>
+                                <li>Twin Beds</li>
+                            </ul><br>
+                        </td>
+                        <td>8th to 10th Floor</td>
+                        <td>Amazzonite granite bathrooms</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <td colspan="4">CHECK IN - 2.00PM / CHECK OUT - 12.00PM</td>
+                </tfoot>
+            </table>
+        </section><br class="break"><br class="break">
+
+    </body>
+</html>

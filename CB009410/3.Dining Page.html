@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Santani LK</title>
+        <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="CSS/3.Dining.css">
+    </head>
+    <body>
+        <section class="header">
+            <nav>
+                <a href="index.html"><img src="images/Santani Logo.png"></a>
+                <div class="nav-links" id="navLinks">
+                    <img src="Images/Icons/Close.png" class="logo1" onclick="hideMenu()">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="2.Accommodation Page.html">ACCOMMODATION</a></li>
+                        <li><a href="3.Dining Page.html">DINING</a></li>
+                        <li><a href="4.Reservation Page.html">RESERVATION</a></li>
+                        <li><a href="5.Contact Us.html">CONTACT US</a></li>
+                    </ul>
+                </div>
+                <img src="Images/Icons/Menu.png" class="logo2" onclick="showMenu()">
+            </nav>
+            <div class="text-box">
+                <h1>DINING</h1>
+                <p>The Santani LK Hotel takes pleasure in presenting some of Colombo’s finest cuisine in unique locations throughout the colonial gem.</p>
+            </div>
+        </section>
+
+        <script>
+            var navLinks = document.getElementById("navLinks");
+            function showMenu(){
+                navLinks.style.right = "0px";
+            }
+            function hideMenu(){
+                navLinks.style.right = "-200px";
+            }
+        </script>
+
+        <section>
+            <section class="facilities">
+                <h1>DELIGHT DIVINE</h1><br>
+                <p>Traditional Sri Lankan cuisine is one of the quintessential parts of the dining experience we offer! 
+                    Our property is located amidst an ancient land that was once part of a magnificent empire – so much of history and heritage is 
+                    imbued in the air that surrounds our premises.</p><br>
+    
+                    <div class="row">
+                        <div class="facilities-col">
+                            <img src="images/Verandah.jpg">
+                            <h3>THE VERANDAH</h3>
+                            <p>For more than a century and a half, we’ve had adventurers, authors, generals and gentry dining under the eaves of the Verandah.</p>
+                            <a href="6.The Verandah CSS1.html" class="hero-btn">FIND OUT MORE</a>
+                            </div>
+                        <div class="facilities-col">
+                            <img src="images/Chequerboard.jpg">
+                            <h3>CHEQUERBOARD</h3>
+                            <p>The Chequerboard serves drinks throughout the day. Make sure to get here early to get a seat for the most amazing sun set.</p>
+                            <a href="7.Chequerboard CSS2.html" class="hero-btn">FIND OUT MORE</a>
+                        </div>
+                        <div class="facilities-col">
+                            <img src="images/Traveller's Bar.jpg">
+                            <h3>THE TRAVELLER'S BARL</h3>
+                            <p>Step into the fantastic traveller's bar here at the Hotel Santnai LK, the very best hotel wine bar you’ll find here in thehistoric city of Galle.</p>
+                            <a href="" class="hero-btn">FIND OUT MORE</a>
+                        </div>
+                    </div>
+            </section>
+        </section>

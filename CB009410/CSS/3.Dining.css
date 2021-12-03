@@ -1,0 +1,87 @@
+.header{
+    min-height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(19, 19, 19, 0.5),rgb(0,0,0,0.5)),url('../Images/3.Dinning\ Image.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 40px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 20px;
+    color: #fff;
+}
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 25px;
+    }
+    .text-box p{
+        font-size: 15px;
+    }
+}
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;  
+}
+.facilities h1{
+    font-size: 25px;
+}
+.facilities{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.facilities-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+.facilities-col img{
+    width: 100%;
+    border-radius: 10px;
+}
+.facilities-col p{
+    padding: 0;
+}
+.facilities-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+.hero-btn{
+    margin-top: 20px;
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    border: 1.5px solid rgb(0, 0, 0);
+    padding: 12px 34px;
+    font-size: 14px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    border: 1px solid #ffe70a;
+    background: #ffe70a;
+    transition: 0.2s;
+}
